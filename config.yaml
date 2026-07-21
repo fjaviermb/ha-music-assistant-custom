@@ -1,0 +1,44 @@
+name: Music Assistant Custom
+version: 2.9.9-custom
+slug: music_assistant_custom
+description: Custom Music Assistant build with background task priority fixes. Uses kiwipaulrob/server.
+url: https://github.com/kiwipaulrob/ha-music-assistant-custom
+arch:
+  - amd64
+  - aarch64
+homeassistant_api: true
+discovery:
+  - music_assistant
+audio: true
+auth_api: true
+host_network: true
+ingress: true
+ingress_port: 8094
+panel_icon: mdi:music-assistant
+panel_title: Music Assistant (Custom)
+panel_admin: false
+uart: false
+apparmor: true
+map:
+  - media:rw
+  - ssl:ro
+init: false
+stage: experimental
+tmpfs: true
+backup_exclude:
+  - cache.db
+  - collage_images/*
+  - .cache/*
+options:
+  log_level: info
+  server_repo: "kiwipaulrob/server@fix/import-playlist-priority"
+  frontend_repo: ""
+  safe_mode: false
+schema:
+  log_level: list(debug|info|warning|error)
+  server_repo: str?
+  frontend_repo: str?
+  safe_mode: bool
+privileged:
+  - SYS_ADMIN
+  - DAC_READ_SEARCH
