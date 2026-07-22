@@ -22,7 +22,6 @@ RUN set -x \
   && npm install -g yarn \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
-  # pre-install base requirements to save startup time
   && uv venv $VIRTUAL_ENV \
   && uv pip install \
   --no-cache \
