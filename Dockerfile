@@ -10,7 +10,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 RUN set -x \
   && apt-get update \
-  && apt-get install -y --no-install-recommends jq htop git curl ca-certificates gnupg libportaudio2 libasound2-plugins dbus \
+  && apt-get install -y --no-install-recommends jq htop git curl ca-certificates gnupg libportaudio2 libasound2-plugins dbus gcc build-essential \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
