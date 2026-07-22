@@ -7,7 +7,7 @@ ENV MASS_APP_VAR_SPOTIFY_CLIENT_ID="f6003033c0194d80b8260c9c08fc8257"
 
 RUN set -xe \
   && apt-get update \
-  && apt-get install -y --no-install-recommends jq htop git curl ca-certificates gnupg libportaudio2 libasound2-plugins dbus gcc build-essential \
+  && apt-get install -y --no-install-recommends jq htop git curl \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
