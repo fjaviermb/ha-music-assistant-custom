@@ -42,3 +42,6 @@ schema:
 privileged:
   - SYS_ADMIN
   - DAC_READ_SEARCH
+
+# Build from source (Dockerfile)
+build: true
