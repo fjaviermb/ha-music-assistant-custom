@@ -14,7 +14,8 @@ RUN set -xe \
 VOLUME [ "/data" ]
 EXPOSE 8095
 
-RUN chmod 777 -R /app \
+RUN mkdir -p /app \
+  && chmod 777 -R /app \
   && chmod 777 -R /tmp
 
 COPY entrypoint.sh /app/entrypoint.sh
