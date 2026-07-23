@@ -56,6 +56,9 @@ build_git_url() {
     echo "git+https://github.com/${parsed}"
 }
 
+# Create and activate virtual environment
+uv venv /app/venv --quiet
+
 # Activate virtual environment
 . $VIRTUAL_ENV/bin/activate
 
