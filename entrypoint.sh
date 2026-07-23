@@ -56,6 +56,14 @@ build_git_url() {
     echo "git+https://github.com/${parsed}"
 }
 
+# Ensure virtual environment exists
+if [ ! -f "$VIRTUAL_ENV/bin/activate" ]; then
+    if ! command -v uv >/dev/null 2>&1 && command -v pip3 >/dev/null 2>&1; then
+        pip3 install uv --quiet
+    fi
+    python3 -m venv "$VIRTUAL_ENV"
+fi
+
 # Activate virtual environment
 . $VIRTUAL_ENV/bin/activate
 
