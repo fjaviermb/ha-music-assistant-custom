@@ -31,7 +31,7 @@ backup_exclude:
   - .cache/*
 options:
   log_level: info
-  server_repo: "kiwipaulrob/server@fix/import-playlist-priority"
+  server_repo: "music-assistant/server@dev"
   frontend_repo: ""
   safe_mode: false
 schema:
