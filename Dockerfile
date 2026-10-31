@@ -5,6 +5,8 @@ ENV VIRTUAL_ENV=/app/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ENV MASS_APP_VAR_SPOTIFY_CLIENT_ID="f6003033c0194d80b8260c9c08fc8257"
 
+ENV ENV_VAR="env_value"
+
 RUN set -xe \
   && apt-get update \
   && apt-get install -y --no-install-recommends jq htop git curl \
