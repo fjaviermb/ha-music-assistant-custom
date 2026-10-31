@@ -29,6 +29,7 @@ backup_exclude:
   - cache.db
   - collage_images/*
   - .cache/*
+  - library.db.backup
 options:
   log_level: info
   server_repo: "music-assistant/server@dev"
