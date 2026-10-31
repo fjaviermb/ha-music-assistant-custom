@@ -7,7 +7,7 @@ frontend_repo=$(cat /data/options.json | jq -r .frontend_repo)
 
 echo ""
 echo "-----------------------------------------------------------"
-echo "Music Assistant Developer App"
+echo "Music Assistant Developer App $(date %F %T)"
 echo "-----------------------------------------------------------"
 echo ""
 
