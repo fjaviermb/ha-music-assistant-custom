@@ -95,6 +95,10 @@ if [ "$build_from_source" = true ]; then
     req_ref=$(echo "$server_ref" | cut -d'@' -f2)
     requirements_url="https://raw.githubusercontent.com/${req_owner}/${req_repo}/${req_ref}/requirements_all.txt"
 
+    cmake --version
+    echo "[DEBUG] CMake version: "$(cmake --version)"
+
+
     echo "Installing dependencies from: $requirements_url"
     echo ""
 
